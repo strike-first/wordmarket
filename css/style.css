@@ -124,7 +124,7 @@ img {
   width: 50%;
   max-width: 450px;
   height: 100vh;
-  background-color: rgba(18, 18, 18, 0.65); /* ★黒の透明度を65%に落として薄く */
+  background-color: rgba(18, 18, 18, 0.4); /* ★黒の透明度を65%に落として薄く */
   backdrop-filter: blur(12px);               /* ★すりガラス効果を強めにして綺麗にぼかす */
   -webkit-backdrop-filter: blur(12px);
   display: flex;
