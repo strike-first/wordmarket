@@ -1,0 +1,270 @@
+/* ----------------------------------
+   全体・共通スタイル
+---------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333333;
+  line-height: 1.8;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+
+/* ----------------------------------
+   ヘッダー（全ページ共通の固定茶色バー）
+---------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #8c6e5d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1005; /* ← ★【変更】 z-index を 1000 から 1005 に上げます */
+}
+
+/* 右上メニューボタン（三本線 ⇔ ×） */
+.menu-btn {
+  position: relative;
+  width: 30px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1010; /* ← ★【変更】 z-index を 1002 から 1010 に上げます */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ふわっと表示される全画面メニュー */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(140, 110, 93, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.nav-menu {
+  list-style: none;
+  text-align: center;
+}
+.nav-menu li {
+  margin: 25px 0;
+}
+.nav-menu a {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: opacity 0.3s;
+}
+.nav-menu a:hover {
+  opacity: 0.7;
+}
+
+/* 各ページのコンテンツ表示エリア（ヘッダーで隠れないよう上余白を確保） */
+.page-content {
+  margin-top: 60px;
+}
+
+/* ----------------------------------
+   トップページ専用（メインビジュアル）
+---------------------------------- */
+.hero {
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  min-height: 450px;
+  background: url('https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* ----------------------------------
+   各セクション・コンテンツ配置
+---------------------------------- */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 25px;
+}
+.two-column {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.two-column .col-img {
+  flex: 0 0 320px;
+}
+.two-column .col-text {
+  flex: 1;
+}
+.two-column p {
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  color: #444444;
+  text-align: justify;
+}
+
+/* プロフィール・代表挨拶 */
+.profile-img-container {
+  position: relative;
+}
+.profile-img-container .img-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.greeting-box {
+  margin-top: 50px;
+  text-align: center;
+}
+.greeting-box h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.greeting-box p {
+  max-width: 800px;
+  margin: 0 auto 1.5em auto;
+  text-align: left;
+  font-size: 14px;
+  color: #444444;
+}
+.signature {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 50px;
+}
+
+/* 企業情報 */
+.company-section {
+  text-align: center;
+}
+.company-top-img {
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+.company-info-list {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 14px;
+  line-height: 2;
+  color: #444444;
+}
+.company-info-list dt {
+  font-weight: bold;
+  float: left;
+  clear: left;
+  width: 140px;
+}
+.company-info-list dd {
+  margin-left: 140px;
+  margin-bottom: 12px;
+}
+.company-info-list ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* スマホ表示対応 */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+  .two-column .col-img {
+    width: 100%;
+    flex: auto;
+  }
+  .hero-text {
+    font-size: 22px;
+  }
+  .company-info-list dt {
+    float: none;
+    width: 100%;
+  }
+  .company-info-list dd {
+    margin-left: 0;
+  }
+
+  /* ----------------------------------
+   フッター（全ページ共通の最下部領域）
+---------------------------------- */
+.footer {
+  padding: 50px 20px 30px;
+  text-align: center;
+  background-color: #ffffff; /* 背景色 */
+  border-top: 1px solid #eeeeee; /* 上部の区切り線 */
+}
+.footer-logo {
+  max-width: 180px; /* ロゴ画像の表示サイズ（お好みで調整してください） */
+  margin: 0 auto 15px auto;
+}
+.footer-company-name {
+  font-size: 14px;
+  color: #666666;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+}
