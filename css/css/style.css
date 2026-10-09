@@ -27,7 +27,6 @@ img {
   padding: 60px 20px;
 }
 
-
 /* ----------------------------------
    ヘッダー（全ページ共通の固定茶色バー）
 ---------------------------------- */
@@ -37,12 +36,30 @@ img {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #8c6e5d;
+  background-color: #8c6e5d; /* 茶色バー */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  z-index: 1005; /* ← ★【変更】 z-index を 1000 から 1005 に上げます */
+  padding-right: 30px;
+  z-index: 1005;
+}
+
+/* ★ 左半分のクリックエリア（トップページリンク） */
+.header-left-link {
+  display: flex;
+  align-items: center;
+  width: 50%; /* バーの左半分 */
+  height: 100%;
+  padding-left: 30px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.header-left-link:hover {
+  opacity: 0.85;
 }
 
 /* 右上メニューボタン（三本線 ⇔ ×） */
@@ -53,38 +70,76 @@ img {
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1010; /* ← ★【変更】 z-index を 1002 から 1010 に上げます */
+  z-index: 1010; /* 最前面に配置 */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.menu-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+/* メニューオープン時（×マークに変形） */
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
 
-/* ふわっと表示される全画面メニュー */
-.nav-overlay {
+/* ----------------------------------
+   右からスライドしてでるメニュー
+---------------------------------- */
+/* バックドロップ（暗転レイヤー） */
+.nav-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(140, 110, 93, 0.95);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1001;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
-.nav-overlay.active {
+.nav-backdrop.active {
   opacity: 1;
   visibility: visible;
 }
+
+/* 右側スライドメニュー */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  max-width: 450px;
+  height: 100vh;
+  background-color: rgba(140, 110, 93, 0.98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+.nav-overlay.active {
+  right: 0;
+}
+
 .nav-menu {
   list-style: none;
   text-align: center;
 }
 .nav-menu li {
-  margin: 25px 0;
+  margin: 30px 0;
 }
 .nav-menu a {
   color: #ffffff;
@@ -96,7 +151,7 @@ img {
   opacity: 0.7;
 }
 
-/* 各ページのコンテンツ表示エリア（ヘッダーで隠れないよう上余白を確保） */
+/* 各ページのコンテンツ表示エリア */
 .page-content {
   margin-top: 60px;
 }
@@ -228,8 +283,37 @@ img {
   padding-left: 20px;
 }
 
+/* ----------------------------------
+   フッター（全ページ共通最下部エリア）
+---------------------------------- */
+.footer {
+  padding: 50px 20px 30px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #eeeeee;
+}
+.footer-logo {
+  max-width: 180px;
+  margin: 0 auto 15px auto;
+}
+.footer-company-name {
+  font-size: 14px;
+  color: #666666;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 /* スマホ表示対応 */
 @media (max-width: 768px) {
+  .header-left-link {
+    font-size: 18px;
+    padding-left: 15px;
+    width: 60%;
+  }
+  .nav-overlay {
+    width: 100%;
+    max-width: 100%;
+  }
   .two-column {
     flex-direction: column;
   }
@@ -247,24 +331,4 @@ img {
   .company-info-list dd {
     margin-left: 0;
   }
-
-  /* ----------------------------------
-   フッター（全ページ共通の最下部領域）
----------------------------------- */
-.footer {
-  padding: 50px 20px 30px;
-  text-align: center;
-  background-color: #ffffff; /* 背景色 */
-  border-top: 1px solid #eeeeee; /* 上部の区切り線 */
-}
-.footer-logo {
-  max-width: 180px; /* ロゴ画像の表示サイズ（お好みで調整してください） */
-  margin: 0 auto 15px auto;
-}
-.footer-company-name {
-  font-size: 14px;
-  color: #666666;
-  font-weight: bold;
-  letter-spacing: 1px;
-
 }

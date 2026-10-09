@@ -8,9 +8,9 @@
 </head>
 <body>
 
-  <!-- 全ページ共通の固定茶色バー -->
+  <!-- 固定茶色バー（左半分がindex.htmlへのリンク） -->
   <header class="header">
-    <div class="header-logo"><a href="index.html">AI×GREEN ENERGY</a></div>
+    <a href="index.html" class="header-left-link">AI×GREEN ENERGY</a>
     <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
       <span></span>
       <span></span>
@@ -18,7 +18,10 @@
     </button>
   </header>
 
-  <!-- 全ページ共通のポップアップメニュー -->
+  <!-- 背景暗転用レイヤー -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- 右側スライドメニュー -->
   <nav class="nav-overlay" id="navOverlay">
     <ul class="nav-menu">
       <li><a href="index.html">トップ</a></li>
@@ -28,7 +31,7 @@
     </ul>
   </nav>
 
-  <!-- トップページメイン画面 -->
+  <!-- メインビジュアル -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-text">
@@ -36,6 +39,12 @@
       より賢く、より軽く
     </div>
   </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <img src="images/logo.png" alt="会社ロゴ" class="footer-logo">
+    <div class="footer-company-name">株式会社ワードマーケット</div>
+  </footer>
 
   <script src="js/script.js"></script>
 </body>
