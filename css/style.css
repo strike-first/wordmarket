@@ -290,17 +290,22 @@ img {
 }
 
 /* ----------------------------------
-   フッター（全ページ共通最下部エリア）
+   フッター（ロゴと社名を横並び＆中央揃え）
 ---------------------------------- */
 .footer {
-  padding: 50px 20px 30px;
-  text-align: center;
+  padding: 40px 20px;
   background-color: #ffffff;
   border-top: 1px solid #eeeeee;
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;     /* 上下方向の中央揃え */
+  gap: 12px;               /* ロゴと会社名の間の余白 */
 }
 .footer-logo {
-  max-width: 180px;
-  margin: 0 auto 15px auto;
+  height: 32px;            /* ロゴの高さをコンパクトに固定 */
+  width: auto;
+  margin: 0;
+  object-fit: contain;
 }
 .footer-company-name {
   font-size: 14px;
