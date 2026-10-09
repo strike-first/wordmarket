@@ -11,6 +11,8 @@ body {
   color: #333333;
   line-height: 1.8;
   background-color: #ffffff;
+  -webkit-font-smoothing: antialiased; /* フォントの輪郭を滑らかにする設定 */
+  -moz-osx-font-smoothing: grayscale;
 }
 a {
   text-decoration: none;
@@ -44,11 +46,11 @@ img {
   z-index: 1005;
 }
 
-/* ★ 左半分のクリックエリア（トップページリンク） */
+/* 左半分のクリックエリア（トップページリンク） */
 .header-left-link {
   display: flex;
   align-items: center;
-  width: 50%; /* バーの左半分 */
+  width: 50%;
   height: 100%;
   padding-left: 30px;
   color: #ffffff;
@@ -70,7 +72,7 @@ img {
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1010; /* 最前面に配置 */
+  z-index: 1010;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -114,7 +116,7 @@ img {
   visibility: visible;
 }
 
-/* 右側スライドメニュー */
+/* 右側スライドメニュー（透き通った黒背景＆ブラー効果） */
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -122,13 +124,15 @@ img {
   width: 50%;
   max-width: 450px;
   height: 100vh;
-  background-color: rgba(140, 110, 93, 0.98);
+  background-color: rgba(18, 18, 18, 0.88); /* 透き通った黒（不透明度88%） */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1001;
   transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
 }
 .nav-overlay.active {
   right: 0;
@@ -178,14 +182,16 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
+/* ★ トップのテキスト（細身・上品なデザインに修正） */
 .hero-text {
   position: relative;
   z-index: 1;
   color: #ffffff;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1.6;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  font-size: 34px;
+  font-weight: 300; /* 太字(bold)から細身(300)に変更 */
+  letter-spacing: 2px; /* 字間を少し広げて優雅に */
+  line-height: 1.8;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* 影を柔らかく広げて可読性を保持 */
 }
 
 /* ----------------------------------
@@ -303,7 +309,9 @@ img {
   letter-spacing: 1px;
 }
 
-/* スマホ表示対応 */
+/* ----------------------------------
+   スマホ表示対応
+---------------------------------- */
 @media (max-width: 768px) {
   .header-left-link {
     font-size: 18px;
@@ -323,6 +331,7 @@ img {
   }
   .hero-text {
     font-size: 22px;
+    font-weight: 300;
   }
   .company-info-list dt {
     float: none;
