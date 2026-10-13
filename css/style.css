@@ -320,7 +320,7 @@ img.crop-vertical {
   height: 400px;           /* 縦の長さ（お好みで 350px や 450px などに変更OK） */
   object-fit: cover;       /* 中央を中心に枠いっぱいに切り抜き */
   object-position: center; /* 中央を基準 */
-}
+top: 60px}
 
 .section-title {
   margin-top: 70px;
