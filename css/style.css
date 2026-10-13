@@ -299,7 +299,7 @@ img {
   text-align: center; /* 中央揃え */
 }
 .footer-logo {
-  height: 70px; /* ロゴサイズ */
+  height: 90px; /* ロゴサイズ */
   width: auto;
   margin: 0 auto 10px auto; /* 上下中央配置＆文字との間隔 */
   object-fit: contain;
