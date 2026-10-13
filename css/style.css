@@ -299,13 +299,13 @@ img {
   text-align: center; /* 中央揃え */
 }
 .footer-logo {
-  height: 58px; /* ロゴサイズ */
+  height: 70px; /* ロゴサイズ */
   width: auto;
   margin: 0 auto 10px auto; /* 上下中央配置＆文字との間隔 */
   object-fit: contain;
 }
 .footer-company-name {
-  font-size: 15px; /* 文字サイズを少し小さめに */
+  font-size: 10px; /* 文字サイズを少し小さめに */
   color: #777777;
   font-weight: 500;
   letter-spacing: 1.5px; /* 字間を少し広げて上品に */
