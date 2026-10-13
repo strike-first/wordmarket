@@ -310,7 +310,9 @@ img {
   font-weight: 500;
   letter-spacing: 1.5px; /* 字間を少し広げて上品に */
 }
-
+footer {
+    margin-top: 60px;
+}
 
 /* 特定の画像だけ縦長に中央くり抜き */
 img.crop-vertical {
