@@ -373,6 +373,13 @@ img.crop-vertical {
     width: 100%;
     flex: auto;
   }
+    .company-info-list dt {
+    float: none;
+    width: 100%;
+  }
+  .company-info-list dd {
+    margin-left: 0;
+  }
    @media (max-width: 768px) {
   .hero {
     background-position: 70% center;
@@ -382,11 +389,5 @@ img.crop-vertical {
     font-size: 22px;
     font-weight: 300;
   }
-  .company-info-list dt {
-    float: none;
-    width: 100%;
-  }
-  .company-info-list dd {
-    margin-left: 0;
-  }
+ 
 }
