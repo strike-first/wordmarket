@@ -356,38 +356,45 @@ img.crop-vertical {
 /* ----------------------------------
    スマホ表示対応
 ---------------------------------- */
+/* ----------------------------------
+   スマホ表示対応
+---------------------------------- */
 @media (max-width: 768px) {
   .header-left-link {
     font-size: 18px;
     padding-left: 15px;
     width: 60%;
   }
+
   .nav-overlay {
     width: 100%;
     max-width: 100%;
   }
+
   .two-column {
     flex-direction: column;
   }
+
   .two-column .col-img {
     width: 100%;
     flex: auto;
   }
-    .company-info-list dt {
-    float: none;
-    width: 100%;
-  }
-  .company-info-list dd {
-    margin-left: 0;
-  }
-   @media (max-width: 768px) {
+
   .hero {
     background-position: 70% center;
   }
-}
+
   .hero-text {
     font-size: 22px;
     font-weight: 300;
   }
- 
+
+  .company-info-list dt {
+    float: none;
+    width: 100%;
+  }
+
+  .company-info-list dd {
+    margin-left: 0;
+  }
 }
