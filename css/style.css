@@ -286,8 +286,16 @@ img {
   text-align: center;
 }
 .company-top-img {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto 30px auto;
+}
+
+.company-top-img img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .company-info-list {
   max-width: 650px;
@@ -356,9 +364,7 @@ img.crop-vertical {
 /* ----------------------------------
    スマホ表示対応
 ---------------------------------- */
-/* ----------------------------------
-   スマホ表示対応
----------------------------------- */
+
 @media (max-width: 768px) {
   .header-left-link {
     font-size: 18px;
@@ -384,7 +390,7 @@ img.crop-vertical {
   background-position: 70% center;
 }
 
-body.top-page .hero {    font-size: 22px;
+body.top-page .hero-text {    font-size: 22px;
     font-weight: 300;
   }
 
