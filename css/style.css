@@ -375,7 +375,7 @@ img.crop-vertical {
   }
    @media (max-width: 768px) {
   .hero {
-    background-position: -40% center;
+    background-position: 70% center;
   }
 }
   .hero-text {
