@@ -317,10 +317,12 @@ footer {
 /* 特定の画像だけ縦長に中央くり抜き */
 img.crop-vertical {
   width: 100%;
-  height: 400px;           /* 縦の長さ（お好みで 350px や 450px などに変更OK） */
-  object-fit: cover;       /* 中央を中心に枠いっぱいに切り抜き */
-  object-position: center; /* 中央を基準 */
-top: 90px}
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: 60px;
+}
 
 .section-title {
   margin-top: 70px;
