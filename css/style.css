@@ -380,12 +380,11 @@ img.crop-vertical {
     flex: auto;
   }
 
-  .hero {
-    background-position: 70% center;
-  }
+ body.top-page .hero {
+  background-position: 70% center;
+}
 
-  .hero-text {
-    font-size: 22px;
+body.top-page .hero {    font-size: 22px;
     font-weight: 300;
   }
 
