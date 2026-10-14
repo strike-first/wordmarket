@@ -368,6 +368,11 @@ img.crop-vertical {
     width: 100%;
     flex: auto;
   }
+   @media (max-width: 768px) {
+  .hero {
+    background-position: 40% center;
+  }
+}
   .hero-text {
     font-size: 22px;
     font-weight: 300;
