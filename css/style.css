@@ -18,6 +18,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a.text-link {
+  color: #2767a8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}underline-offset: 3px;
 img {
   max-width: 100%;
   height: auto;
