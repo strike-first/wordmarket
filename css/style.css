@@ -265,10 +265,11 @@ img {
 }
 
 .signpic {
-  width: 300px;
+  width: 260px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
-
 /* 企業情報 */
 .company-section {
   text-align: center;
