@@ -258,7 +258,9 @@ img {
   padding-right: 50px;
 }
 .message {
-  margin-left: 80px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 5%;
   text-align: left;
 }
 /* 企業情報 */
