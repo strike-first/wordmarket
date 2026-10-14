@@ -263,6 +263,13 @@ img {
   padding: 0 5%;
   text-align: left;
 }
+
+.signpic {
+  width: 700px;
+  height: 400px;
+  object-fit: cover;
+}
+
 /* 企業情報 */
 .company-section {
   text-align: center;
