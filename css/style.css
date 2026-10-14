@@ -265,9 +265,8 @@ img {
 }
 
 .signpic {
-  width: 700px;
-  height: 400px;
-  object-fit: cover;
+  width: 300px;
+  height: auto;
 }
 
 /* 企業情報 */
