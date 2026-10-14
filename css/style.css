@@ -257,7 +257,10 @@ img {
   font-weight: bold;
   padding-right: 50px;
 }
-
+.message {
+  margin-left: 80px;
+  text-align: left;
+}
 /* 企業情報 */
 .company-section {
   text-align: center;
