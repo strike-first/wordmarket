@@ -280,6 +280,32 @@ img {
   margin-left: auto;
   margin-right: 50px;
 }
+.message-closing {
+  margin-top: 60px;
+  margin-bottom: 45px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.message-signature {
+  text-align: right;
+  margin-right: 20px;
+  line-height: 1.8;
+}
+
+.message-signature span {
+  display: block;
+  font-size: 13px;
+  color: #555;
+}
+
+.message-signature strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
 /* 企業情報 */
 .company-section {
   text-align: center;
