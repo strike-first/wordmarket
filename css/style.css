@@ -401,6 +401,13 @@ body.top-page .hero-text {    font-size: 22px;
     margin: 0 auto 30px auto;
   }
 
+  
+  body.message-page .two-column p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+
   .company-top-img img {
     width: 100%;
     max-width: 100%;
